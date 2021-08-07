@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="16.807933">
+    <testcase classname="Flight booking" name="Book the cheapest flight" time="16.807933">
+        <failure message="java.lang.AssertionError: To place&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at pageObjects.FlightBookingPage.clickSearch(FlightBookingPage.java:193)&#10;&#9;at com.krishna.run.FlightBookingStepDefinition.User_search_button_and_review_the_details(FlightBookingStepDefinition.java:104)&#10;&#9;at ✽.Then User search button and review the details(FlightBooking.feature:9)&#10;">
+            <![CDATA[Given User launch the goibibo "https://www.goibibo.com" website.............passed
+When User select the "oneway" option........................................passed
+Then User select from "Bengaluru" and to "Mumbai" cities....................passed
+And User select departure date..............................................passed
+And User select class details...............................................passed
+Then User search button and review the details..............................failed
+
+StackTrace:
+java.lang.AssertionError: To place
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at pageObjects.FlightBookingPage.clickSearch(FlightBookingPage.java:193)
+	at com.krishna.run.FlightBookingStepDefinition.User_search_button_and_review_the_details(FlightBookingStepDefinition.java:104)
+	at ✽.Then User search button and review the details(FlightBooking.feature:9)
+]]>
+        </failure>
+    </testcase>
+</testsuite>

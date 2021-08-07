@@ -1,0 +1,123 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Book the cheapest flight",
+        "description": "",
+        "id": "flight-booking;book-the-cheapest-flight",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10278614047,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User launch the goibibo \"https://www.goibibo.com\" website",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.goibibo.com",
+                  "offset": 25
+                }
+              ],
+              "location": "FlightBookingStepDefinition.User_launch_the_goibibo_website(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 28744609,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User select the \"oneway\" option",
+            "match": {
+              "arguments": [
+                {
+                  "val": "oneway",
+                  "offset": 17
+                }
+              ],
+              "location": "FlightBookingStepDefinition.User_select_the_travel_type_option(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4413202306,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User select from \"Bengaluru\" and to \"Mumbai\" cities",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Bengaluru",
+                  "offset": 18
+                },
+                {
+                  "val": "Mumbai",
+                  "offset": 37
+                }
+              ],
+              "location": "FlightBookingStepDefinition.User_select_from_and_destination_places(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 300397485,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User select departure date",
+            "match": {
+              "location": "FlightBookingStepDefinition.User_select_departure_date()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 128865607,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User select class details",
+            "match": {
+              "location": "FlightBookingStepDefinition.User_select_clas_details()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1658108972,
+              "error_message": "java.lang.AssertionError: To place\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat pageObjects.FlightBookingPage.clickSearch(FlightBookingPage.java:193)\n\tat com.krishna.run.FlightBookingStepDefinition.User_search_button_and_review_the_details(FlightBookingStepDefinition.java:104)\n\tat ✽.Then User search button and review the details(FlightBooking.feature:9)\n",
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "User search button and review the details",
+            "match": {
+              "location": "FlightBookingStepDefinition.User_search_button_and_review_the_details()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 2,
+            "name": "@SDETCucumberAssignments"
+          }
+        ]
+      }
+    ],
+    "name": "Flight booking",
+    "description": "",
+    "id": "flight-booking",
+    "keyword": "Feature",
+    "uri": "FlightBooking.feature"
+  }
+]

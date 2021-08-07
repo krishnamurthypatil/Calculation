@@ -1,0 +1,6 @@
+# Created on 2020-07-23T19:51:41.257
+Error: Could not find or load main class 						-Dcucumber.options=--plugin 						ru.yandex.qatools.allure.cucumberjvm.AllureReporter
+
+# Created on 2020-07-23T19:51:41.257
+Caused by: java.lang.ClassNotFoundException: 						-Dcucumber.options=--plugin 						ru.yandex.qatools.allure.cucumberjvm.AllureReporter
+
