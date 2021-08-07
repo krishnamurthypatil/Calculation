@@ -5,3 +5,5 @@ Below are some key points related to execution.
 # Due to less time, few assertions were not added.
 # Test cases are running properly as per assessment
 # Used few reporting structure as I had setup in my MAC.
+
+# This GIT repository is private and please let me know whom to add it to view this. 
