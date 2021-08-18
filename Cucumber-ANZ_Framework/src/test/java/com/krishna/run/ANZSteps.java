@@ -26,6 +26,28 @@ public class ANZSteps extends Base {
 
 	}
 	
+	@Description("User Fills the form and Register")
+	@Then("^User Register \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" the details$")
+	public void User_Register(String vEmail, String vGender, String vName, String vLName, String vPass,String vDay, String vMnth, String vTrs, String vFname, String vLaname,String vComp, String vAdd1, String vAdd2,String vCity, String vState, String vPostal, String vCntry, String vAddDetails,String vHomePh, String vMobile, String vAddOther) throws Throwable {
+		ANZRegistrationPage regPage = new ANZRegistrationPage(driver);
+		log.info("User On Registration Page");
+		regPage.registerForm(vEmail,vGender,vName,vLName,vPass,vDay,vMnth,vTrs,vFname,vLaname,vComp,vAdd1,vAdd2,vCity,vState,vPostal,vCntry,vAddDetails,vHomePh,vMobile,vAddOther);
+		regPage.checkLoginDetails(vName, vLName);
+		regPage.logout();
+		
+	}
+	
+	@Description("User Logs In")
+	@Then("^User logs in with \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" to site$")
+	public void User_logsin(String vEmail, String vPass, String vName, String vLName) throws Throwable {
+		ANZRegistrationPage regPage = new ANZRegistrationPage(driver);
+		log.info("User On Logs In and add to cart");
+		regPage.loginback(vEmail, vPass);
+		regPage.checkLoginDetails(vName, vLName);
+		regPage.addToCart();
+		
+	}
+	
 	@Description("User Fills the form and Submit")
 	@Then("^User Fills \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" the details$")
 	public void User_fills_the_registration_form_and_submit(String sType, String sDependent, String sProperty, String sYourInc, String sOtherInc,
