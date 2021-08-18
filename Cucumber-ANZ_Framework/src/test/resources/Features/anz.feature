@@ -2,6 +2,16 @@
 Feature: Registration and login is successful
   I want to use this template for my feature file
 
+@Registration
+  Scenario: Registration to automationpractice Site
+    Given User launch the "http://automationpractice.com/index.php" website
+    Then User Register "test4@dummy.com" "Mr" "Kush" "Pat" "test1" "1" "March" "1980" "Kush" "Pat" "SIP" "Blore" "BTM" "Austin" "Texas" "78759" "India" "Testing" "0802836475" "5129657452" "not" the details
+		
+  
+ @login
+  Scenario: Login to automationpractice Site
+    Given User launch the "http://automationpractice.com/index.php" website
+    Then User logs in with "test2@dummy.com" "test1" "Kush" "Pat" to site
   @Registration
   Scenario: Registration to ANZ Site
     Given User launch the gillette "https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/" website
